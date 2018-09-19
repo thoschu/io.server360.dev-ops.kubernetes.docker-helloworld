@@ -9,7 +9,7 @@ docker pull thoschu/helloworld:latest
 
 To run this image:
 ```
-docker run -p 80:80/tcp "thoschu/helloworld:latest"
+docker run -p 7788:80/tcp "thoschu/helloworld:latest"
 ```
 
 Dockerhub link: https://hub.docker.com/r/thoschu/helloworld/
