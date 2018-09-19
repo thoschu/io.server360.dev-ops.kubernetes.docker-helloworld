@@ -31,5 +31,3 @@ spec:
      protocol: TCP
      port: 80
      nodePort: 32080
- selector:
-   app: helloworld
