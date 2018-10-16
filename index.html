@@ -8,8 +8,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script>
             function init() {
+                const host = window.location.host;
+                const pathname = window.location.pathname;
+                const origin = window.location.origin;
                 const timeDisplay = document.createTextNode("");
                 document.getElementById("clock").appendChild(timeDisplay);
+                console.log(host);
+                console.log(pathname);
+                console.log(origin);
             }
 
             function updateVisit() {
