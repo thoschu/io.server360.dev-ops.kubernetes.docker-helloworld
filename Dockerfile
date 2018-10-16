@@ -8,7 +8,7 @@
 FROM ubuntu
 
 # File Author / Maintainer
-MAINTAINER Tom Schulte <thoschulte@gmail.com>
+MAINTAINER Tom S. <thoschulte@gmail.com>
 
 # Install Nginx
 

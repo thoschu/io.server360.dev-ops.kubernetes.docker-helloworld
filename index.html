@@ -5,17 +5,16 @@
         <meta name="description" content="A simple docker helloworld example by Tom S.">
         <meta name="author" content="Tom S.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello world...</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script>
             function init() {
-                const host = window.location.host;
-                const pathname = window.location.pathname;
-                const origin = window.location.origin;
                 const timeDisplay = document.createTextNode("");
+                const windowLocation = window.location;
                 document.getElementById("clock").appendChild(timeDisplay);
-                document.getElementById("host").innerHTML = host;
-                document.getElementById("pathname").innerHTML = pathname;
-                document.getElementById("origin").innerHTML = origin;
+                ["host", "pathname", "origin"].forEach(function (element) {
+                    document.getElementById(element).innerHTML = windowLocation[element];
+                });
             }
 
             function updateVisit() {
@@ -87,9 +86,18 @@
             <div class="jumbotron">
                 <h1>Hello</h1>
                 <p>Is it me you're looking for?</p>
-                <div id="host" class="alert alert-info" role="alert"></div>
-                <div id="pathname" class="alert alert-info" role="alert"></div>
-                <div id="origin" class="alert alert-info" role="alert"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">window.location.host</div>
+                    <div id="host" class="panel-body"></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">window.location.pathname</div>
+                    <div id="pathname" class="panel-body"></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">window.location.origin</div>
+                    <div id="origin" class="panel-body"></div>
+                </div>
             </div>
             <hr/>
             <div class="footer">
