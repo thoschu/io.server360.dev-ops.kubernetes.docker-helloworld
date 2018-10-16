@@ -13,9 +13,9 @@
                 const origin = window.location.origin;
                 const timeDisplay = document.createTextNode("");
                 document.getElementById("clock").appendChild(timeDisplay);
-                console.log(host);
-                console.log(pathname);
-                console.log(origin);
+                document.getElementById("host").innerHTML = host;
+                document.getElementById("pathname").innerHTML = pathname;
+                document.getElementById("origin").innerHTML = origin;
             }
 
             function updateVisit() {
@@ -61,7 +61,7 @@
             }
         </script>
     </head>
-    <body onload="updateVisit(); updateClock(); setInterval('updateClock()', 1000)">
+    <body onload="init(); updateVisit(); updateClock(); setInterval('updateClock()', 1000)">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -87,6 +87,9 @@
             <div class="jumbotron">
                 <h1>Hello</h1>
                 <p>Is it me you're looking for?</p>
+                <div id="host" class="alert alert-info" role="alert"></div>
+                <div id="pathname" class="alert alert-info" role="alert"></div>
+                <div id="origin" class="alert alert-info" role="alert"></div>
             </div>
             <hr/>
             <div class="footer">
